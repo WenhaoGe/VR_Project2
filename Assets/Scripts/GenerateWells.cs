@@ -28,7 +28,11 @@ public class GenerateWells : MonoBehaviour {
 					var well = Instantiate(water_well_prefab, new Vector3 (xPos, 120f, zPos), Quaternion.identity);
 					var marker = Instantiate(well_marker, new Vector3 (xPos, 160f, zPos), Quaternion.Euler(new Vector3(80,0,0)));
 					well.name = values [0];
-					well.GetComponent<DisplayInfo> ().inFormation = "X: " + values [1] + " Y: " + values [2] + " Z: " + values [3];
+					var info = "Location: "+ longitude +", "+latitude+"\nCounty: "+values[4];
+					var info2 = "\nMeasurement: " + values [5] + "/" + values [6] + "/" + values [7];
+					var info3 = "\nWater Elevation: " + values [8] + "\nSaturatedThickness: " + values [9];
+
+					well.GetComponent<DisplayInfo> ().inFormation = info+info2+info3;
 				}
 			}
         }
