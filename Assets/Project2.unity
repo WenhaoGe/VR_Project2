@@ -259,6 +259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   water_well_prefab: {fileID: 100002, guid: 86e9f6bb23445c2418abce9d418b64a9, type: 2}
+  well_marker: {fileID: 1148105499086998, guid: 470069c8772fdf047a14992d9a721041,
+    type: 2}
 --- !u!1001 &284700325
 Prefab:
   m_ObjectHideFlags: 0

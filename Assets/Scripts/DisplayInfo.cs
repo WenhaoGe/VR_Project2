@@ -30,7 +30,19 @@ public class DisplayInfo : MonoBehaviour {
         if (isClicked)
         {
             GUI.Label(new Rect(5, 5, 400, 100), "This is " + this.name + " with Information: "+ this.inFormation);
-            
+
+			/*
+			 * 
+			 * API No.: 15-077-22002
+			 * Lease: Dilbert SWD 3306
+			 * Operator: SandRidge Exploration and Production LLC km
+			 * Drilled: 1/1/2014
+			 * Completed: 3/29/2014
+			 * Status: Authorized Injection Well
+			 * Depth: 6,374 meters
+			 * 
+			 * 
+            */
         }
            
     }
