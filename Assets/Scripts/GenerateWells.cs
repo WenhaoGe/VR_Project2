@@ -14,15 +14,21 @@ public class GenerateWells : MonoBehaviour {
         {
             string[] values = lines[index].Split(',');
             Debug.Log(values);
-            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-            cube.name = values[0];
             float longitude = float.Parse(values[2]);
             float latitude = float.Parse(values[3]);
-            float xPos = (-101.527984f - longitude)*6000000/650;
-            float zPos = (33.850869f - latitude) * 6000000 / 540;
-            cube.transform.position = new Vector3(xPos, 150f, zPos);
-            cube.AddComponent<DisplayInfo>();
-            cube.GetComponent<DisplayInfo>().inFormation = "X: "+ values[1]+ " Y: "+ values[2]+ " Z: "+ values[3];
+			if (longitude >= -102.0156f && longitude <= -101.74713)
+			{
+				if (latitude >= 33.47297 && latitude <= 33.69849) 
+				{
+					GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+					cube.name = values[0];
+					float xPos = (longitude - -102.0156f) * 1862.28756f;
+					float zPos = (latitude - 33.47297f) * 2217.098262f;
+					cube.transform.position = new Vector3 (xPos, 110f, zPos);
+					cube.AddComponent<DisplayInfo> ();
+					cube.GetComponent<DisplayInfo> ().inFormation = "X: " + values [1] + " Y: " + values [2] + " Z: " + values [3];
+				}
+			}
         }
         
     }
