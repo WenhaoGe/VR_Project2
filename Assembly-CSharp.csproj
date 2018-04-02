@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\DisplayInfo.cs" />
      <Compile Include="Assets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\GenerateWells.cs" />
+     <None Include="Assets\Texture\lubbock terrain\lubbock README.txt" />
      <None Include="Assets\Cartoon lowpoly water well\readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
