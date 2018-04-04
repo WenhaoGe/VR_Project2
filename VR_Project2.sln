@@ -1,11 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< HEAD
 # Visual Studio 15
+=======
+# Visual Studio 2017
+>>>>>>> 9215b1f9a4b5cac0460ac8c98d69ad8fbca61229
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR_Project2", "VR_Project2.csproj", "{08D17936-7754-6D2C-2B72-2175C057F9E9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR_Project2.Plugins", "VR_Project2.Plugins.csproj", "{F385E9C1-F28A-781B-0A49-8F1C2CE77E0C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR_Project2.Editor.Plugins", "VR_Project2.Editor.Plugins.csproj", "{65089BDF-3D58-9E3A-013E-B7EFAD0B678E}"
+<<<<<<< HEAD
+=======
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VR_Project2.Editor", "VR_Project2.Editor.csproj", "{8559A8A9-1ADF-551F-364F-9F7E9CD9828F}"
+>>>>>>> 9215b1f9a4b5cac0460ac8c98d69ad8fbca61229
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +34,13 @@ Global
 		{65089BDF-3D58-9E3A-013E-B7EFAD0B678E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65089BDF-3D58-9E3A-013E-B7EFAD0B678E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65089BDF-3D58-9E3A-013E-B7EFAD0B678E}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+=======
+		{8559A8A9-1ADF-551F-364F-9F7E9CD9828F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8559A8A9-1ADF-551F-364F-9F7E9CD9828F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8559A8A9-1ADF-551F-364F-9F7E9CD9828F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8559A8A9-1ADF-551F-364F-9F7E9CD9828F}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 9215b1f9a4b5cac0460ac8c98d69ad8fbca61229
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
