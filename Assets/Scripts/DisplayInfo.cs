@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DisplayInfo : MonoBehaviour {
     public bool isClicked = false;
-    public string inFormation = "";
+    public string inFormation = "Depth: 6,374 meters";
         // Use this for initialization
     void Start () {
         if (gameObject.GetComponent<BoxCollider>() == null)
@@ -29,7 +29,8 @@ public class DisplayInfo : MonoBehaviour {
     {
         if (isClicked)
         {
-            GUI.Label(new Rect(5, 5, 400, 100), "This is " + this.name + " with Information: "+ this.inFormation);
+            GUI.backgroundColor = Color.blue;
+            GUI.Button(new Rect(5, 5, 500, 100), "This is " + this.name + " with Information: "+ this.inFormation);
 
 			/*
 			 * 
