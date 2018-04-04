@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\GenerateWells.cs" />
      <Compile Include="Assets\Scripts\ReverseNormals.cs" />
+     <Compile Include="Assets\Scripts\Teletransport.cs" />
      <None Include="Assets\Texture\lubbock terrain\lubbock README.txt" />
      <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
      <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump Cutout.shader" />
