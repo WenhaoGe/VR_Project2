@@ -30,8 +30,8 @@ public class DisplayInfo : MonoBehaviour {
         if (isClicked)
         {
             GUI.backgroundColor = Color.blue;
-            GUI.Button(new Rect(5, 5, 500, 100), "This is " + this.name + " with Information: "+ this.inFormation);
-            GUI.Label(new Rect(5, 5, 400, 100), "Well ID: " + this.name + "\n"+ this.inFormation);
+            GUI.Button(new Rect(5, 5, 500, 100), "Well ID: " + this.name + this.inFormation);
+            GUI.skin.button.alignment = TextAnchor.MiddleLeft;;
 
 			/*
 			 * 
