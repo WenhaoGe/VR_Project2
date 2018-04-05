@@ -59,11 +59,8 @@
      <Compile Include="Assets\Scripts\GenerateWells.cs" />
      <Compile Include="Assets\Scripts\Teletransport.cs" />
      <None Include="Assets\Texture\lubbock terrain\lubbock README.txt" />
-     <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
-     <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump Cutout.shader" />
      <None Include="Assets\Cartoon lowpoly water well\readme.txt" />
-     <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Standard Diffuse Bump.shader" />
-     <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump.shader" />
+     <None Include="Assets\Shaders\DoubleSide.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
