@@ -952,11 +952,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583bf121ae888b546913ba6c76460022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water_well_prefab: {fileID: 100002, guid: 86e9f6bb23445c2418abce9d418b64a9, type: 2}
-  well_marker: {fileID: 1148105499086998, guid: 470069c8772fdf047a14992d9a721041,
-    type: 2}
-  depth_object: {fileID: 1582283712431982, guid: 2d38d2c0e1675b04a98de45809ea1d33,
-    type: 2}
+  water_well_prefab: {fileID: 0}
+  well_marker: {fileID: 0}
+  depth_object: {fileID: 0}
 --- !u!114 &998855188
 MonoBehaviour:
   m_ObjectHideFlags: 0

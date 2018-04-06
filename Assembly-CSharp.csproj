@@ -57,7 +57,6 @@
      <Compile Include="Assets\Scripts\DisplayInfo.cs" />
      <Compile Include="Assets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\GenerateWells.cs" />
-     <Compile Include="Assets\Scripts\GenerateWellsDepth.cs" />
      <Compile Include="Assets\Scripts\Teletransport.cs" />
      <None Include="Assets\Texture\lubbock terrain\lubbock README.txt" />
      <None Include="Assets\Cartoon lowpoly water well\readme.txt" />
