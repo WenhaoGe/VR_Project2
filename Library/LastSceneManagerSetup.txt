@@ -1,7 +1,4 @@
 sceneSetups:
-- path: Assets/Project2Rain.unity
-  isLoaded: 0
-  isActive: 0
 - path: Assets/Project2.unity
   isLoaded: 1
   isActive: 1
