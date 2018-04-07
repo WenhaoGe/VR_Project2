@@ -879,6 +879,7 @@ GameObject:
   - component: {fileID: 998855187}
   - component: {fileID: 998855188}
   - component: {fileID: 998855189}
+  - component: {fileID: 998855190}
   m_Layer: 0
   m_Name: LandSurfaceLayer
   m_TagString: Untagged
@@ -892,7 +893,7 @@ TerrainCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 998855183}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e52fb17f9b1e7fd48b8955f1391d3688, type: 2}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: 8a0797b6b05942e4b8d62ff573183daa, type: 2}
   m_EnableTreeColliders: 1
@@ -952,9 +953,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 583bf121ae888b546913ba6c76460022, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water_well_prefab: {fileID: 0}
-  well_marker: {fileID: 0}
-  depth_object: {fileID: 0}
+  water_well_prefab: {fileID: 100002, guid: 86e9f6bb23445c2418abce9d418b64a9, type: 2}
+  well_marker: {fileID: 1148105499086998, guid: 470069c8772fdf047a14992d9a721041,
+    type: 2}
+  depth_object: {fileID: 1582283712431982, guid: 2d38d2c0e1675b04a98de45809ea1d33,
+    type: 2}
 --- !u!114 &998855188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,6 +988,18 @@ MonoBehaviour:
   - {fileID: 284700326}
   - {fileID: 2073597140}
   - {fileID: 635221703}
+--- !u!114 &998855190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 998855183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653053314e98d094792de2d7275fd83a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water_cube: {fileID: 1112096629793432, guid: 9d45f0d111a51bd429b3a4fbbc7ac9fc, type: 2}
 --- !u!1 &1049083234
 GameObject:
   m_ObjectHideFlags: 0
