@@ -98,7 +98,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 122
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!136 &136433649572311758
 CapsuleCollider:
   m_ObjectHideFlags: 1
