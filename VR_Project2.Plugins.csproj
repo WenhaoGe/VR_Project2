@@ -354,9 +354,9 @@
     <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Cartoon lowpoly water well\readme.txt" />
-    <None Include="Assets\Lowpoly_Holiday_House\Readme.txt" />
     <None Include="Assets\Readme.txt" />
+    <None Include="Assets\Resources\WaterLevelsCombination.txt" />
+    <None Include="Assets\Resources\WellBoreHole.txt" />
     <None Include="Assets\Shaders\DoubleSide.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

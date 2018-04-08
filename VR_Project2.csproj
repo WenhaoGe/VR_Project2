@@ -295,27 +295,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\HeightmapFromTexture.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\Checkpoint.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\CheckpointController.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\ControlPanel.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\FollowTargetCamera.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\HelicopterController.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\HeliRotorController.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\LookAtTargetController.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\PressedKeyCode.cs" />
-    <Compile Include="Assets\Helicopter\Scripts\UIGameController.cs" />
     <Compile Include="Assets\LetRain.cs" />
     <Compile Include="Assets\Rain.cs" />
     <Compile Include="Assets\Scripts\DisplayInfo.cs" />
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
+    <Compile Include="Assets\Scripts\GenerateUGWater.cs" />
     <Compile Include="Assets\Scripts\GenerateWells.cs" />
     <Compile Include="Assets\Scripts\Teletransport.cs" />
     <Compile Include="Assets\WaterChange.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Cartoon lowpoly water well\readme.txt" />
-    <None Include="Assets\Lowpoly_Holiday_House\Readme.txt" />
     <None Include="Assets\Readme.txt" />
+    <None Include="Assets\Resources\WaterLevelsCombination.txt" />
+    <None Include="Assets\Resources\WellBoreHole.txt" />
     <None Include="Assets\Shaders\DoubleSide.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
