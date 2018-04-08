@@ -26,7 +26,7 @@ public class GenerateUGWater : MonoBehaviour {
 				{
 					float xPos = (longitude - -102.0156f) * 1862.28756f;
 					float zPos = (latitude - 33.47297f) * 2217.098262f;
-                    var point = Instantiate(water_cube, new Vector3(xPos, 100f, zPos), Quaternion.identity);
+                    var point = Instantiate(water_cube, new Vector3(xPos, -200f, zPos), Quaternion.identity);
 					point.transform.localScale = new Vector3(12.0f, 0.02f * thickness, 12.0f);
 
 

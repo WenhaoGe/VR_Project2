@@ -29,9 +29,9 @@ public class GenerateWells : MonoBehaviour {
 					float xPos = (longitude - -102.0156f) * 1862.28756f;
 					float zPos = (latitude - 33.47297f) * 2217.098262f;
 
-					var well = Instantiate(water_well_prefab, new Vector3 (xPos, 300f, zPos), Quaternion.identity);
-					var marker = Instantiate(well_marker, new Vector3 (xPos, 350f, zPos), Quaternion.Euler(new Vector3(80,0,0)));
-                    var depth = Instantiate(depth_object, new Vector3(xPos, 170f, zPos), Quaternion.identity);
+					var well = Instantiate(water_well_prefab, new Vector3 (xPos, 100f, zPos), Quaternion.identity);
+					var marker = Instantiate(well_marker, new Vector3 (xPos, 150f, zPos), Quaternion.Euler(new Vector3(80,0,0)));
+                    var depth = Instantiate(depth_object, new Vector3(xPos, -100f, zPos), Quaternion.identity);
 					var acc = new Vector3(0.0f, -5.0f, 0.0f);
 					depth.GetComponent<Rigidbody>().AddForce(-acc*500);
 
@@ -43,18 +43,6 @@ public class GenerateWells : MonoBehaviour {
 					var info = "\nLocation: "+ longitude +", "+latitude+"\nCounty: "+values[4];
 					var info2 = "\nMeasurement: " + values [5] + "/" + values [6] + "/" + values [7];
 					var info3 = "\nWater Elevation: " + values [8] + "\nSaturatedThickness: " + values [9];
-
-					/*
-
-					Saturated Thickness data must be visualized on top of the water elevation gameobject
-					Saturated Thickness data must change if it is raining, there is a drought, or it is neutral
-
-					Buttons to make it rain or make drought
-
-					Teletransportation			
-		
-					
-					 */
 
 					well.GetComponent<DisplayInfo> ().inFormation = info+info2+info3;
 				}
