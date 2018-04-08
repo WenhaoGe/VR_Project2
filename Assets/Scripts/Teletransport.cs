@@ -12,7 +12,6 @@ using System.Collections.Generic;
 	 {	
 		if(top_viewer.activeSelf)
 		{
-			print("here");
 			Vector3 p = top_viewer.transform.position;
 			bot_viewer.transform.position = p;
 

@@ -56,10 +56,12 @@
      <Compile Include="Assets\Rain.cs" />
      <Compile Include="Assets\Scripts\DisplayInfo.cs" />
      <Compile Include="Assets\Scripts\FirstPersonController.cs" />
+     <Compile Include="Assets\Scripts\GenerateUGWater.cs" />
      <Compile Include="Assets\Scripts\GenerateWells.cs" />
      <Compile Include="Assets\Scripts\Teletransport.cs" />
      <None Include="Assets\Texture\lubbock terrain\lubbock README.txt" />
-     <None Include="Assets\Cartoon lowpoly water well\readme.txt" />
+     <None Include="Assets\Resources\WellBoreHole.txt" />
+     <None Include="Assets\Resources\WaterLevelsCombination.txt" />
      <None Include="Assets\Shaders\DoubleSide.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
