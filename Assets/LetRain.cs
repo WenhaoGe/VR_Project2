@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LetRain : MonoBehaviour {
 
+    // create two particle systems and an audio
     public ParticleSystem rain,rain1;
     public AudioSource s;
     // Use this for initialization
@@ -17,6 +18,10 @@ public class LetRain : MonoBehaviour {
 		
 	}
 
+    // to-do-list:
+    //1. let the first particle system play
+    //2. let the second particle system play
+    //3.Let the audioplay
     public void Activate()
     {
         rain.Play();
