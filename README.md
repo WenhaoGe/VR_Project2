@@ -46,7 +46,7 @@ There's a start menu when you begin the game that allows the player to select wh
  - Kevon Manahan's part:
    - Created models to represent elevation of each well
    - Read data from Excel so the elevation is scaled properly for each well
-   - Added 2 cameras so the user could swith between different perspectives(Aerial, Elevation, First Person)
+   - Added 2 cameras so the user could switch between different perspectives(Aerial, Elevation, First Person)
    - Created a start menu for the game
    - Added 3 buttons on the Game Interface to switch between cameras
    - Wrote the script to switch between cameras
