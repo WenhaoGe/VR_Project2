@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 741
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 51
+  controlID: 76
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,8 +64,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 741
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 65
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 66
+  controlID: 11
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -327,19 +327,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Standard Assets
+    - Assets/Standard Assets/water well
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Standard Assets
+  - Assets/Standard Assets/water well
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Documents\Projects\VR_Project2
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 47}
-    m_SelectedIDs: 742d0000
-    m_LastClickedID: 11636
-    m_ExpandedIDs: 000000001e2800000629000046290000ce290000e22900009c2a0000742d0000822d0000b62f0000b82f0000ffffff7f
+    scrollPos: {x: 0, y: 523}
+    m_SelectedIDs: fe2a0000
+    m_LastClickedID: 11006
+    m_ExpandedIDs: 000000001e2800005e2800000a2900004a290000d0290000e4290000782a00009c2a0000782d0000862d0000de2f0000e02f0000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -367,7 +367,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e2800000629000046290000ce290000e22900009c2a0000742d0000822d0000b62f0000b82f0000
+    m_ExpandedIDs: 000000001e2800000a2900004a290000d0290000e42900009c2a0000782d0000862d0000de2f0000e02f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -485,9 +485,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ae310000
-    m_LastClickedID: 12718
-    m_ExpandedIDs: f6edffff9efbffff00000000
+    m_SelectedIDs: 6a83fbff
+    m_LastClickedID: -294038
+    m_ExpandedIDs: 6a83fbff00f1ffff12f1ffff38f2ffff4af2ffff9efbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -538,14 +538,14 @@ MonoBehaviour:
     height: 449
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 27033.910637773766
+  lastFramingTime: 13622.01755649421
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 293.81723, y: 9.494972, z: 156.52124}
+    m_Target: {x: 236.88477, y: 43.514297, z: 250.64688}
     speed: 2
-    m_Value: {x: 293.81723, y: 9.494972, z: 156.52124}
+    m_Value: {x: 236.88477, y: 43.514297, z: 250.64688}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -569,13 +569,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.015164329, y: 0.9823724, z: -0.16206574, w: 0.09191936}
+    m_Target: {x: 0.118672386, y: 0.7005195, z: -0.11988922, w: 0.69340897}
     speed: 2
-    m_Value: {x: 0.015164329, y: 0.9823724, z: -0.16206574, w: 0.09191936}
+    m_Value: {x: 0.118672386, y: 0.7005195, z: -0.11988922, w: 0.69340897}
   m_Size:
-    m_Target: 257.13303
+    m_Target: 470.60315
     speed: 2
-    m_Value: 257.13303
+    m_Value: 470.60315
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -8,6 +8,7 @@ def isValid(obj):
     return False
 
 def main(county):
+    x = 3.28084
     with open("well_data.csv") as wd:
         st = {}
         line = wd.readline()
@@ -34,14 +35,11 @@ def main(county):
                 if(arr[1]==county and isValid(arr[12]) and isValid(arr[16]) and isValid(arr[23])):
                     
                     if(arr[0] in st and arr[0] not in done):
-                        small_arr = [arr[0],arr[1],arr[12],arr[16],arr[23],arr[25],st[arr[0]][0],st[arr[0]][1],str(float(arr[25])-float(st[arr[0]][0])),st[arr[0]][2],st[arr[0]][3],st[arr[0]][4]]
+                        small_arr = [arr[0],arr[1],arr[12],arr[16],float(arr[23])/x,float(arr[25])/x,float(st[arr[0]][0])/x,st[arr[0]][1],str(float(float(arr[25])-float(st[arr[0]][0]))/x),st[arr[0]][2],st[arr[0]][3],st[arr[0]][4]]
                         done.append(arr[0])
 
                         big_arr.append(small_arr)
                 line = wellmain.readline().strip("\n")
-                # line = wellmain.readline().strip("\n")
-                # line = wellmain.readline().strip("\n")
-                # line = wellmain.readline().strip("\n")
 
             writer.writerows(big_arr)
 

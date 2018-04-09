@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44425842, g: 0.49370766, b: 0.5730848, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -797,7 +797,7 @@ Terrain:
     serializedVersion: 2
     rgba: 4286545791
   m_LegacyShininess: 0.078125
-  m_MaterialTemplate: {fileID: 2100000, guid: 546b810d6c0318140bed958d847950d0, type: 2}
+  m_MaterialTemplate: {fileID: 2100000, guid: 5913206de0e493f49ac47e01cc69a31c, type: 2}
   m_BakeLightProbesForTrees: 1
   m_ScaleInLightmap: 1
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
@@ -808,7 +808,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 998855183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 38.6, z: 0}
+  m_LocalPosition: {x: 0, y: 48.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -828,7 +828,7 @@ MonoBehaviour:
   water_well_prefab: {fileID: 100002, guid: 86e9f6bb23445c2418abce9d418b64a9, type: 2}
   well_marker: {fileID: 1148105499086998, guid: 470069c8772fdf047a14992d9a721041,
     type: 2}
-  depth_object: {fileID: 1582283712431982, guid: 2d38d2c0e1675b04a98de45809ea1d33,
+  depth_object: {fileID: 1370001742524426, guid: 2a36fcba070552546b589844daa17390,
     type: 2}
   water_cyl: {fileID: 1485947518287562, guid: 1477630f52093d84d93c8c962dc2cc90, type: 2}
 --- !u!114 &998855188
