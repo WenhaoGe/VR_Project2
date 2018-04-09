@@ -10,18 +10,23 @@
 ## Project Report
 
 ### We learned...
-- The basics of Unity and C#
+- The basic tutorials of Unity and C#
 - How to download and import different assets from Unity asset store
 - How to write C# code to activate and stop the particle system
 - How to write C# code to activate and stop the audio
-- How to write C# code to read data from excel documents
+- How to write C# code to read data from csv documents
 - How to establish the connections between buttons and gameobjects
-- How to buttons to control the scripts
+- How to use buttons to control the scripts
+- How to use buttons to control the cameras
+- How to control the audio by using a key
 - How to add trees and grass to the terrain
+- How to change the texture of terrain
 - How to create the first person controller
+- How to create the third person controller
 - How to create user interfaces
 - How to scripts to the interfaces
 - How to instantiate different prefabs
+
 ### Biggest Issues
 - mapping the terrain from the available data
 - accurate depth representation of each well
@@ -36,7 +41,7 @@ There's a start menu when you begin the game that allows the player to select wh
 ### Work Distribution
 - Wenhao Ge's part:
    - Chose the terrain and exported the terrain from the high map 
-   - Created the rain effect and cloud effect by using particle systems
+   - Created the rain effect and dynamic cloud effect by using particle systems
    - Created a water fountain by using particle system
    - Created two buttons called "pause" and "play" to activate the rain and stop the rain
    - Wrote scripts to let buttons control the rain audio
