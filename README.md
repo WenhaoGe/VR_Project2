@@ -16,7 +16,7 @@
 - How to 
 
 ### Biggest Issues
-- mapping the terrain from the availabe data
+- mapping the terrain from the available data
 - accurate depth representation of each well
 - merging contributions from each teammate
 
