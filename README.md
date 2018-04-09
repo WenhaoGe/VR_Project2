@@ -16,9 +16,9 @@
 - How to 
 
 ### Biggest Issues
--mapping the terrain from the availabe data
--accurate depth representation of each well
--merging contributions from each teammate
+- mapping the terrain from the availabe data
+- accurate depth representation of each well
+- merging contributions from each teammate
 
 ## Contributors
--Lino Abiel Virgin, Wenhao Ge, Kevon Manahan
+- Lino Abiel Virgin, Wenhao Ge, Kevon Manahan
