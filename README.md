@@ -50,5 +50,5 @@ There's a start menu when you begin the game that allows the player to select wh
    - Created a start menu for the game
    - Added 3 buttons on the Game Interface to switch between cameras
    - Wrote the script to switch between cameras
-   - Added an audio to the start menu of the game
+   - Added an audio source to the start menu of the game
    - Created a skybox for both the start menu and play mode
