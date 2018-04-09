@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4021243837917944}
   - component: {fileID: 33318957125964728}
   - component: {fileID: 65969697880797084}
-  - component: {fileID: 23246831521320202}
+  - component: {fileID: 23325662718418698}
   m_Layer: 0
   m_Name: water_cube
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23246831521320202
+--- !u!23 &23325662718418698
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -64,7 +64,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0

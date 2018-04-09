@@ -59,10 +59,11 @@
      <Compile Include="Assets\Scripts\GenerateUGWater.cs" />
      <Compile Include="Assets\Scripts\GenerateWells.cs" />
      <Compile Include="Assets\Scripts\Teletransport.cs" />
-     <None Include="Assets\Texture\lubbock terrain\lubbock README.txt" />
+     <None Include="Assets\Resources\WellMain.txt" />
      <None Include="Assets\Resources\WellBoreHole.txt" />
      <None Include="Assets\Resources\WaterLevelsCombination.txt" />
      <None Include="Assets\Shaders\DoubleSide.shader" />
+     <None Include="Assets\Texture\small_lubbock README.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
