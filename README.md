@@ -14,3 +14,11 @@
 - How to write C# script to activate and stop the particle system
 - How to write C# script to control the audio
 - How to 
+
+## Biggest Issues
+-mapping the terrain from the availabe data
+-accurate depth representation of each well
+-merging contributions from each teammate
+
+## Contributors
+-Lino Abiel Virgin, Wenhao Ge, Kevon Manahan
