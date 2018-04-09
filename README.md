@@ -1,4 +1,5 @@
 # CS 4331-002 - Virtual Reality Project 2
+# Topic: Water Elevation
 ## Due: April 10, 2018
 
 ## Video demonstration
@@ -8,13 +9,19 @@
    
 ## Project Report
 
-### I learned...
+### We learned...
 - The basics of Unity and C#
 - How to download and import different assets from Unity asset store
-- How to write C# script to activate and stop the particle system
-- How to write C# script to control the audio
-- How to 
-
+- How to write C# code to activate and stop the particle system
+- How to write C# code to activate and stop the audio
+- How to write C# code to read data from excel documents
+- How to establish the connections between buttons and gameobjects
+- How to buttons to control the scripts
+- How to add trees and grass to the terrain
+- How to create the first person controller
+- How to create user interfaces
+- How to scripts to the interfaces
+- How to instantiate different prefabs
 ### Biggest Issues
 - mapping the terrain from the available data
 - accurate depth representation of each well
