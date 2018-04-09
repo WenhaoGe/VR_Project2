@@ -43,3 +43,4 @@ There's a start menu when you begin the game that allows the player to select wh
 - Found out the monthly precipitation data in Lubbock and recorded the data in an excel document
 - Read data from the excel document and calculate the average precipitation data for each season.
 - Created the water layer and set the water thickness by using the average precipitation data for each season
+- - Kevon Manahan
