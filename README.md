@@ -15,7 +15,7 @@
 - How to write C# script to control the audio
 - How to 
 
-## Biggest Issues
+### Biggest Issues
 -mapping the terrain from the availabe data
 -accurate depth representation of each well
 -merging contributions from each teammate
