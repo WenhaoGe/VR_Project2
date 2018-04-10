@@ -61,7 +61,8 @@
      <Compile Include="Assets\Scripts\GenerateUGWater.cs" />
      <Compile Include="Assets\Scripts\GenerateWells.cs" />
      <Compile Include="Assets\Scripts\Teletransport.cs" />
-     <Compile Include="Assets\WaterChange.cs" />
+     <Compile Include="Assets\Scripts\WaterChange.cs" />
+     <Compile Include="Assets\Scripts\WorldSettings.cs" />
      <None Include="Assets\Resources\WellMain.txt" />
      <None Include="Assets\Resources\WellBoreHole.txt" />
      <None Include="Assets\Resources\WaterLevelsCombination.txt" />

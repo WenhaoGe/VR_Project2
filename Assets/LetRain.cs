@@ -9,7 +9,8 @@ public class LetRain : MonoBehaviour {
     public ParticleSystem rain,rain1;
     public AudioSource s;
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
 		
 	}
 	
