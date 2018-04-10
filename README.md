@@ -49,6 +49,7 @@ There's a start menu when you begin the game that allows the player to select wh
    - Created the rain effect and dynamic cloud effect by using particle systems
    - Created a water fountain by using particle system
    - Created four buttons called 'Spring",'Summer','Fall,'Winter'. When 'Fall' is clicked, the scene starts  raining. When other three buttons are clicked, rain stops 
+   - Changed the underground water layer thickness by clicking the previous four buttons
    - Wrote scripts to let buttons control the rain audio
    - Found out the monthly precipitation data in Lubbock and recorded the data in a csv document
    - Read data from the csv document and calculate the average precipitation data for each season.
