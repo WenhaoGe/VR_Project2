@@ -13,8 +13,6 @@ public class GenerateUGWater : MonoBehaviour {
         TextAsset txtAsset = (TextAsset)Resources.Load("precipitation_data", typeof(TextAsset));
         string[] lines = txtAsset.text.Split(new char[] { '\n' });
 
-
-
         string[] values = lines[1].Split(',');
         //print(values[1]);
         float numVal1, numVal2, numVal3, numVal4, numVal5, numVal6, numVal7, numVal8, numVal9, numVal10, numVal11, numVal12;
@@ -36,11 +34,6 @@ public class GenerateUGWater : MonoBehaviour {
         double average_Summer = (numVal2 + numVal3 + numVal4) / 3;
         double average_Fall = (numVal5 + numVal6 + numVal7) / 3;
         double average_Winter = (numVal8 + numVal9 + numVal10) / 3;
-
-        /*  print(average_Spring);
-          print(average_Summer);
-          print(average_Fall);
-          print(average_Winter);*/
     }
 
     void Start ()
@@ -62,8 +55,8 @@ public class GenerateUGWater : MonoBehaviour {
 					float xPos = (longitude - -102.0156f) * 1862.28756f;
 					float zPos = (latitude - 33.47297f) * 2217.098262f;
                     var point = Instantiate(water_cube, new Vector3(xPos, 59.5f, zPos), Quaternion.identity);
-					//point.transform.localScale = new Vector3(5.0f, 0.0625f * thickness, 5.0f);
-					point.transform.localScale = new Vector3(12.0f, 0.01905f * thickness, 12.0f);
+					point.transform.localScale = new Vector3(10.7f, 0.0625f * 3.28084f * thickness, 10.7f);
+					//point.transform.localScale = new Vector3(12.0f, 0.01905f * thickness, 12.0f);
 
 
 					point.name = values [0];
