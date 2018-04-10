@@ -3,9 +3,13 @@
 ## Due: April 10, 2018
 
 ## Video demonstration
-   - On my YouTube channel: https://www.youtube.com/watch?v=IPB3wdwSTVM
+   - On our current repository: https://github.com/WenhaoGe/VR_Project2/tree/master/Assets/Resources/media/demo.mp4
+
+## Screenshots
+   - On our current repository: https://github.com/WenhaoGe/VR_Project2/tree/master/Assets/Resources/media/screenshots.jpg
+
 ## Try it out
-   - The web application can be found at http://swoldemi.me/VR-Project-1
+   - The web application can be found at 
    
 ## Project Report
 
@@ -33,7 +37,7 @@
 - merging contributions from each teammate
 
 ## Contributors
-- Lino Abiel Virgin, Wenhao Ge, Kevon Manahan
+- Lino Virgen, Wenhao Ge, Kevon Manahan
 
 ## Dynamic features/interactables
 There's a start menu when you begin the game that allows the player to select which city will be used, as of now the only city is Lubbock. Whenever you click a well from within the game, it will display the information about each well. Also there is a User Interface which allows the player to cycle between cameras(Main, Elevation, and Aerial) by clicking each button respectively.
