@@ -22,6 +22,7 @@
 - How to establish the connections between buttons and gameobjects
 - How to use buttons to control the scripts
 - How to use buttons to control the cameras
+- How to show the well information without clicking the well objects
 - How to control the audio by using a key
 - How to add trees and grass to the terrain
 - How to change the texture of terrain
@@ -47,10 +48,10 @@ There's a start menu when you begin the game that allows the player to select wh
    - Chose the terrain and exported the terrain from the high map 
    - Created the rain effect and dynamic cloud effect by using particle systems
    - Created a water fountain by using particle system
-   - Created two buttons called "pause" and "play" to activate the rain and stop the rain
+   - Created four buttons called 'Spring",'Summer','Fall,'Winter'. When 'Fall' is clicked, the scene starts  raining and there is a rain audio
    - Wrote scripts to let buttons control the rain audio
-   - Found out the monthly precipitation data in Lubbock and recorded the data in an excel document
-   - Read data from the excel document and calculate the average precipitation data for each season.
+   - Found out the monthly precipitation data in Lubbock and recorded the data in a csv document
+   - Read data from the csv document and calculate the average precipitation data for each season.
    - Created the water layer and set the water thickness by using the average precipitation data for each season
  - Kevon Manahan's part:
    - Created models to represent elevation of each well
