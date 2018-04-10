@@ -37,7 +37,7 @@ public class GenerateWells : MonoBehaviour
 
 					var well = Instantiate(water_well, new Vector3 (xPos, scale*land_el+3.5f, zPos), Quaternion.identity);
 					var container = Instantiate(container_cube, new Vector3 (xPos, scale*land_el+3.5f, zPos), Quaternion.identity);
-					var marker = Instantiate(well_marker, new Vector3 (xPos, 150f, zPos), Quaternion.Euler(new Vector3(80,0,0)));
+					var marker = Instantiate(well_marker, new Vector3 (xPos, 200f, zPos), Quaternion.Euler(new Vector3(0,0,0)));
                     var depth = Instantiate(depth_object, new Vector3(xPos, scale*land_el , zPos), Quaternion.identity);
 					var st = Instantiate(water_cyl, new Vector3(xPos, scale*water_el - (scale*thickness), zPos), Quaternion.identity);
 

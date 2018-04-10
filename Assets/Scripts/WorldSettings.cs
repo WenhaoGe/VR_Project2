@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class WorldSettings : MonoBehaviour
 {
+	public GameObject runner;
 	public Terrain terrain;
 	public Material orig_mat;
 	public Material other_mat;
 	public ParticleSystem rain;
     public AudioSource rain_sound;
-	private Material current_mat;
+	private bool visible;
 
 	// Use this for initialization
 	void Start ()
 	{
-
+		visible = true;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +24,7 @@ public class WorldSettings : MonoBehaviour
 		
 	}
 
-	public void TriggerTerrainView ()
+	public void ToggleTerrain ()
 	{
 		if(terrain.materialTemplate == orig_mat)
 		{
@@ -33,6 +34,21 @@ public class WorldSettings : MonoBehaviour
 		{
 			terrain.materialTemplate = orig_mat;
 		}
+	}
+
+	public void ToggleWater ()
+	{
+		if(visible==true)
+		{
+			runner.GetComponent<GenerateUGWater> ().SetVisibility(false);
+			visible = false;
+		}
+		else
+		{
+			runner.GetComponent<GenerateUGWater> ().SetVisibility(true);
+			visible = true;
+		}
+		
 	}
 
 	public void StartRain ()

@@ -7,6 +7,7 @@ public class GenerateUGWater : MonoBehaviour {
     // Use this for initialization
 
 	public GameObject water_cube;
+    private List<GameObject> points = new List<GameObject>();
 
     public void ReadFile()
     {
@@ -54,20 +55,25 @@ public class GenerateUGWater : MonoBehaviour {
 				{
 					float xPos = (longitude - -102.0156f) * 1862.28756f;
 					float zPos = (latitude - 33.47297f) * 2217.098262f;
-                    var point = Instantiate(water_cube, new Vector3(xPos, 59.5f, zPos), Quaternion.identity);
-					point.transform.localScale = new Vector3(10.7f, 0.0625f * 3.28084f * thickness, 10.7f);
-					//point.transform.localScale = new Vector3(12.0f, 0.01905f * thickness, 12.0f);
-
-
+                    var point = Instantiate(water_cube, new Vector3(xPos, 55f, zPos), Quaternion.identity);
+					point.transform.localScale = new Vector3(10.8f, 0.0625f * (thickness*2.0f), 10.8f);
 					point.name = values [0];
+                    points.Add(point);
 				}
 			}
         }
-        
+    }
+
+    public void SetVisibility(bool b)
+    {
+        for(int i=0; i<points.Count; i++)
+        {
+            points[i].SetActive(b);
+        }
     }
 	
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 }
