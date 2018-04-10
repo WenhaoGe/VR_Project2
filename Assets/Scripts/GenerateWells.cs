@@ -5,19 +5,32 @@ using UnityEngine;
 public class GenerateWells : MonoBehaviour {
 
     // Use this for initialization
+<<<<<<< HEAD
 
 	public GameObject water_well;
 	public Sprite well_marker;
+=======
+    // Created three gameobjects
+	public GameObject water_well_prefab;
+	public GameObject well_marker;
+>>>>>>> 9ddf2c21eebba7b5845d9a92a7d56a6c3e801b29
     public GameObject depth_object;
 	public GameObject water_cyl;
 	public GameObject container_cube;
    
     void Start ()
 	{
+<<<<<<< HEAD
 		TextAsset txtAsset = (TextAsset)Resources.Load("Lubbock_optimized", typeof(TextAsset));
 		string[] lines = txtAsset.text.Split('\n');
 		float scale = 0.0625f;
 
+=======
+        TextAsset txtAsset = (TextAsset)Resources.Load("data", typeof(TextAsset));
+        string[] lines = txtAsset.text.Split('\n');
+        Debug.Log(lines.Length);
+        print("Here");
+>>>>>>> 9ddf2c21eebba7b5845d9a92a7d56a6c3e801b29
         for(int index =1;index < lines.Length-1; index++)
         {
             string[] values = lines[index].Split(',');
@@ -49,6 +62,7 @@ public class GenerateWells : MonoBehaviour {
 					well.name = values [0];
 					container.name = values [0];
 					marker.name = values[0]+"_marker";
+<<<<<<< HEAD
 					depth.name = values[0]+"_well";
 					st.name = values[0]+"_st";
 					var info1 = "\nLocation: "+ longitude +", "+latitude+"\nCounty: "+values[1];
@@ -58,6 +72,13 @@ public class GenerateWells : MonoBehaviour {
 
 					well.GetComponent<DisplayInfo> ().inFormation = info1+info2+info3+info4;
 					container.GetComponent<DisplayInfo> ().inFormation = info1+info2+info3+info4;
+=======
+					depth.name = values[0]+"_elevation";
+
+					var info = "\nLocation: "+ longitude +", "+latitude+"\nCounty: "+values[4];
+					var info2 = "\nMeasurement: " + values [5] + "/" + values [6] + "/" + values [7];
+					var info3 = "\nWater Elevation: " + values [8] + "\nSaturatedThickness: " + values [9];
+>>>>>>> 9ddf2c21eebba7b5845d9a92a7d56a6c3e801b29
 
 				}
 			}

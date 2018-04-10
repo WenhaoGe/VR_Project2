@@ -303,17 +303,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\ExportTerrain.cs" />
-    <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Cartoon lowpoly water well\readme.txt" />
-    <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
-    <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Standard Diffuse Bump.shader" />
-    <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump Cutout.shader" />
-    <None Include="Assets\Ciconia Studio\Shaders\Double Sided Shaders\Double Sided Transparent Diffuse Bump.shader" />
-    <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
-    <None Include="Assets\RainMaker\Readme.txt" />
-    <None Include="Assets\Shaders\Standard.shader" />
+    <None Include="Assets\Readme.txt" />
+    <None Include="Assets\Resources\WaterLevelsCombination.txt" />
+    <None Include="Assets\Resources\WellBoreHole.txt" />
+    <None Include="Assets\Shaders\DoubleSide.shader" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
