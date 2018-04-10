@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Rain : MonoBehaviour {
+
+    // create two particle systems and an audio
     public ParticleSystem rain, rain1;
     public AudioSource s;
 
@@ -17,6 +19,10 @@ public class Rain : MonoBehaviour {
 		
 	}
 
+    // to-do-list:
+    //1. let the first particle system stop playing
+    //2. let the second particle system stop playing
+    //3. Let the audio stop playing
     public void StopRain()
     {
         rain.Stop();

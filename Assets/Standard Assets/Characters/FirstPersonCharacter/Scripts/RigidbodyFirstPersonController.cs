@@ -210,8 +210,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
         private Vector2 GetInput()
-        {
-            
+        {            
             Vector2 input = new Vector2
                 {
                     x = CrossPlatformInputManager.GetAxis("Horizontal"),

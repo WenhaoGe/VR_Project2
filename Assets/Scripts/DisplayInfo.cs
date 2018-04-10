@@ -2,19 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisplayInfo : MonoBehaviour {
+public class DisplayInfo : MonoBehaviour
+{
     public bool isClicked = false;
     public string inFormation = "Depth: 6,374 meters";
-        // Use this for initialization
-    void Start () {
+
+    void Start ()
+    {
         if (gameObject.GetComponent<BoxCollider>() == null)
             gameObject.AddComponent<BoxCollider>();
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
+
+    void OnMouseOver()
+    {
+        isClicked = true;
+    }
+
+    void OnMouseExit()
+    {
+        isClicked = false;
+    }
+
     public void OnMouseDown()
     {
         isClicked = true;
@@ -32,19 +46,6 @@ public class DisplayInfo : MonoBehaviour {
             GUI.backgroundColor = Color.blue;
             GUI.Button(new Rect(5, 5, 300, 150), "Well ID: " + this.name + this.inFormation);
             GUI.skin.button.alignment = TextAnchor.MiddleLeft;;
-
-			/*
-			 * 
-			 * API No.: 15-077-22002
-			 * Lease: Dilbert SWD 3306
-			 * Operator: SandRidge Exploration and Production LLC km
-			 * Drilled: 1/1/2014
-			 * Completed: 3/29/2014
-			 * Status: Authorized Injection Well
-			 * Depth: 6,374 meters
-			 * 
-			 * 
-            */
         }
            
     }

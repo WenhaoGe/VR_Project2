@@ -6,10 +6,11 @@ public class GenerateWells : MonoBehaviour {
 
     // Use this for initialization
 
-	public GameObject water_well_prefab;
-	public GameObject well_marker;
+	public GameObject water_well;
+	public Sprite well_marker;
     public GameObject depth_object;
 	public GameObject water_cyl;
+	public GameObject container_cube;
    
     void Start ()
 	{
@@ -20,14 +21,14 @@ public class GenerateWells : MonoBehaviour {
         for(int index =1;index < lines.Length-1; index++)
         {
             string[] values = lines[index].Split(',');
-			float longitude,latitude,well_depth,thickness,lsd,water_el,land_el;
+			float longitude,latitude,well_depth,thickness,water_el,land_el;
 			latitude = float.Parse(values[2]);
 			longitude = float.Parse(values[3]);
 			well_depth = float.Parse(values[4]);
 			land_el = float.Parse(values[5]);
 			water_el = float.Parse(values[6]);
 			thickness = float.Parse(values[7]);
-			lsd = float.Parse(values[8]);
+			//lsd = float.Parse(values[8]);
 
 			if (longitude >= -101.9217f && longitude <= -101.83467)
 			{
@@ -36,7 +37,8 @@ public class GenerateWells : MonoBehaviour {
 					float xPos = (longitude - -102.0156f) * 1862.28756f;
 					float zPos = (latitude - 33.47297f) * 2217.098262f;
 
-					var well = Instantiate(water_well_prefab, new Vector3 (xPos, scale*land_el+5, zPos), Quaternion.identity);
+					var well = Instantiate(water_well, new Vector3 (xPos, scale*land_el+3.5f, zPos), Quaternion.identity);
+					var container = Instantiate(container_cube, new Vector3 (xPos, scale*land_el+3.5f, zPos), Quaternion.identity);
 					var marker = Instantiate(well_marker, new Vector3 (xPos, 150f, zPos), Quaternion.Euler(new Vector3(80,0,0)));
                     var depth = Instantiate(depth_object, new Vector3(xPos, scale*land_el , zPos), Quaternion.identity);
 					var st = Instantiate(water_cyl, new Vector3(xPos, scale*water_el - (scale*thickness), zPos), Quaternion.identity);
@@ -45,6 +47,7 @@ public class GenerateWells : MonoBehaviour {
 					st.transform.localScale = new Vector3(5.0f, scale * thickness, 5.0f);
 
 					well.name = values [0];
+					container.name = values [0];
 					marker.name = values[0]+"_marker";
 					depth.name = values[0]+"_well";
 					st.name = values[0]+"_st";
@@ -54,6 +57,7 @@ public class GenerateWells : MonoBehaviour {
 					var info4 = "\nLast Measurement On: " + values [9] + "/" + values [10] + "/" + values[11];
 
 					well.GetComponent<DisplayInfo> ().inFormation = info1+info2+info3+info4;
+					container.GetComponent<DisplayInfo> ().inFormation = info1+info2+info3+info4;
 
 				}
 			}
