@@ -80,7 +80,7 @@ There's a start menu when you begin the game that allows the player to select wh
    - Read data from the csv document and calculate the average precipitation data for each season.
    - Modified the water layer and set the water thickness by using the average precipitation data for each season
    - Decorated the terrain by using trees, grass and houses
- - Kevon Manahan's part:
+- Kevon Manahan's part:
    - Created models to represent elevation of each well
    - Read data from Excel so the elevation is scaled properly for each well
    - Added 2 cameras so the user could switch between different perspectives(Aerial, Elevation, First Person)
@@ -89,7 +89,7 @@ There's a start menu when you begin the game that allows the player to select wh
    - Wrote the script to switch between cameras
    - Added an audio source to the start menu of the game
    - Created a skybox for both the start menu and play mode
-  - Lino Virgen's part:
+- Lino Virgen's part:
    - Researched diverse underground water and well datasets
    - Combined relevant datasets using a python script
    - Calculated ratios between real data and unity measurements
