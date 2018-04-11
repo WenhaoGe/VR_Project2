@@ -26,10 +26,11 @@ This is the initial scene. It contains a city option (Currently there is only Lu
 With a first person controller the user is able to navigate through the map; adding a realistic field experience. If the user aims the cursor to the auto-generated wells information is displayed. The user is also able to click on the provided bottons which are described in the next section.
 
 ### Functionality
-If the user clicks on the Toggle Terrain box the terrain layer will become invisible so that the user can obser the underground layers.
+If the user clicks on the Toggle Terrain box the terrain layer will become invisible so that the user can observe the underground layers.
 <a href="https://imgflip.com/gif/285h9a"><img src="https://i.imgflip.com/285h9a.gif" title="made at imgflip.com"/></a>
 
 The user also has the option to toggle the whole underground water layer so that only the water sections under the wells are shown.
+<a href="https://imgflip.com/gif/285hmb"><img src="https://i.imgflip.com/285hmb.gif" title="made at imgflip.com"/></a>
 
 There are two more view options provided to the user. Aerial view changes the camera angle to a top view. Elevation view changes the camera angle to display the multiple layers. The user can go back to first person control clicking on Main Camera.
 
