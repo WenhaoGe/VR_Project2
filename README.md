@@ -30,7 +30,7 @@ If the user clicks on the Toggle Terrain box the terrain layer will become invis
 <a href="https://imgflip.com/gif/285h9a"><img src="https://i.imgflip.com/285h9a.gif" title="made at imgflip.com"/></a>
 
 The user also has the option to toggle the whole underground water layer so that only the water sections under the wells are shown.
-<a href="https://imgflip.com/gif/285hmb"><img src="https://i.imgflip.com/285hmb.gif" title="made at imgflip.com"/></a>
+<a href="https://imgflip.com/gif/285hq4"><img src="https://i.imgflip.com/285hq4.gif" title="made at imgflip.com"/></a>
 
 There are two more view options provided to the user. Aerial view changes the camera angle to a top view. Elevation view changes the camera angle to display the multiple layers. The user can go back to first person control clicking on Main Camera.
 
