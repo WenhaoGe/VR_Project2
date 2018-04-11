@@ -1253,7 +1253,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   water_well: {fileID: 1526638008967930, guid: 1eed64eae93a178408bf468975070ae5, type: 2}
-  well_marker: {fileID: 21300000, guid: 15966bd7d89a0a4468aafceee579ffb9, type: 3}
+  well_marker: {fileID: 1306084002301434, guid: 8299450ded2750f499a02990e111850a,
+    type: 2}
   depth_object: {fileID: 1370001742524426, guid: 2a36fcba070552546b589844daa17390,
     type: 2}
   water_cyl: {fileID: 1485947518287562, guid: 1477630f52093d84d93c8c962dc2cc90, type: 2}
