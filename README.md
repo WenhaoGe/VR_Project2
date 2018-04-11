@@ -38,6 +38,10 @@ There are two more view options provided to the user. Aerial view changes the ca
 
 <a href="https://imgflip.com/gif/285hy8"><img src="https://i.imgflip.com/285hy8.gif" title="made at imgflip.com"/></a>
 
+If the user places the cursor on a well, information about that particular well will be displayed.
+
+<a href="https://imgflip.com/gif/285ip9"><img src="https://i.imgflip.com/285ip9.gif" title="made at imgflip.com"/></a>
+
 In order to show the different water elevations of the underground layer we added a button per season which modifies the saturated thickness according to the precipitation data.
 
 ### We learned...
