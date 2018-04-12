@@ -53,6 +53,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
             UpdateCursorLock();
+            //SetCursorLock(false);
         }
 
         public void SetCursorLock(bool value)
