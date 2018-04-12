@@ -40,12 +40,12 @@ public class WorldSettings : MonoBehaviour
 	{
 		if(visible==true)
 		{
-			runner.GetComponent<GenerateUGWater> ().SetVisibility(false);
+			runner.GetComponent<GenerateWells> ().SetVisibility(false);
 			visible = false;
 		}
 		else
 		{
-			runner.GetComponent<GenerateUGWater> ().SetVisibility(true);
+			runner.GetComponent<GenerateWells> ().SetVisibility(true);
 			visible = true;
 		}
 		
