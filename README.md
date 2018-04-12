@@ -3,7 +3,7 @@
 
 
 ## Video Demonstration
-   - On our current repository: https://github.com/WenhaoGe/VR_Project2/tree/master/Assets/Resources/media/demo.mp4
+   - On our current repository: https://www.youtube.com/watch?v=hzAO0IqZovA&t=1s
 
 ## Screenshots
    - On our current repository: https://github.com/WenhaoGe/VR_Project2/tree/master/Assets/Resources/media/screenshots.jpg
