@@ -11,6 +11,12 @@ public class MainMenu : MonoBehaviour {
 
     }
 
+    public void Menu()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);  //allows the start menu to access the game scene
+
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit");
