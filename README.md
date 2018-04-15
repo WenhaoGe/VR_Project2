@@ -7,9 +7,6 @@
 
 ## Screenshots
    - On our current repository: https://github.com/WenhaoGe/VR_Project2/tree/master/Assets/Resources/media/screenshots.jpg
-
-## Try it out
-   - Download the project with the following link: 
    
 ## Project Report
 
