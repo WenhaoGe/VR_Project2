@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GenerateWells : MonoBehaviour
 {
+    public GameObject info;
 	public GameObject water_well;
 	public GameObject well_marker;
     public GameObject depth_object;
@@ -18,10 +19,12 @@ public class GenerateWells : MonoBehaviour
 	private List<GameObject> boxs = new List<GameObject>();
     private List<GameObject> points = new List<GameObject>();
 	private List<float> points_orlen = new List<float>();
+    private List<float> points_cur = new List<float>();
 	private List<float> wes = new List<float>();
 	private List<float> deps = new List<float>();
 	private List<float> les = new List<float>();
 	private List<float> sts = new List<float>();
+    private List<float> sts_orlen = new List<float>();
 	private float scale;
    
     void Start ()
@@ -53,6 +56,8 @@ public class GenerateWells : MonoBehaviour
 			{
 				markers[i].GetComponent<SpriteRenderer>().color = Color.red;
 			}
+
+            sts[i] = sts_orlen[i];
         }
 	}
 
@@ -82,14 +87,14 @@ public class GenerateWells : MonoBehaviour
         for(int index =1;index < lines.Length-1; index++)
         {
             string[] values = lines[index].Split(',');
-			float longitude,latitude,well_depth,thickness,water_el,land_el,lsd;
+			float longitude,latitude,well_depth,thickness,water_el,land_el;
 			latitude = float.Parse(values[2]);
 			longitude = float.Parse(values[3]);
 			well_depth = float.Parse(values[4]);
 			land_el = float.Parse(values[5]);
 			water_el = float.Parse(values[6]);
 			thickness = float.Parse(values[7]);
-			lsd = float.Parse(values[8]);
+			//lsd = float.Parse(values[8]);
 
 			if (longitude >= -101.9217f && longitude <= -101.83467)
 			{
@@ -100,7 +105,7 @@ public class GenerateWells : MonoBehaviour
 
 					GameObject well = Instantiate(water_well, new Vector3 (xPos, scale*land_el+3.5f, zPos), Quaternion.identity);
 					GameObject box = Instantiate(container_cube, new Vector3 (xPos, scale*land_el+3.5f, zPos), Quaternion.identity);
-					GameObject marker = Instantiate(well_marker, new Vector3 (xPos, 100f, zPos), Quaternion.Euler(new Vector3(80,0,0)));
+					GameObject marker = Instantiate(well_marker, new Vector3 (xPos, 150f, zPos), Quaternion.Euler(new Vector3(80,0,0)));
                     
 					//GameObject depth = Instantiate(depth_object, new Vector3(xPos, scale*land_el , zPos), Quaternion.identity);
 					//GameObject water = Instantiate(water_cyl, new Vector3(xPos, scale*water_el - (scale*thickness), zPos), Quaternion.identity);
@@ -109,7 +114,6 @@ public class GenerateWells : MonoBehaviour
 					GameObject water = Instantiate(water_cyl, new Vector3(xPos, scale*water_el, zPos), Quaternion.identity);
 
                     depth.transform.localScale = new Vector3(0.75f, scale * well_depth, 0.75f);
-					float d = newYScale(depth,scale * well_depth);
 					depth.transform.localPosition = new Vector3(xPos,scale*land_el,zPos);
 
 					water.transform.localScale = new Vector3(5.0f, scale * thickness, 5.0f);
@@ -129,7 +133,7 @@ public class GenerateWells : MonoBehaviour
 					var info3 = "\nWater Elevation: " + values [6] + "\nSaturatedThickness: " + values [7];
 					var info4 = "\nLast Measurement On: " + values [9] + "/" + values [10] + "/" + values[11];
 
-					well.GetComponent<DisplayInfo> ().inFormation = info1+info2+info3+info4;
+					//well.GetComponent<DisplayInfo> ().inFormation = info1+info2+info3+info4;
 					box.GetComponent<DisplayInfo> ().inFormation = info1+info2+info3+info4;
 					marker.GetComponent<SpriteRenderer>().color = Color.green;
 
@@ -140,6 +144,7 @@ public class GenerateWells : MonoBehaviour
 					boxs.Add(box);
 					wes.Add(water_el);
 					sts.Add(thickness);
+                    sts_orlen.Add(thickness);
 					deps.Add(well_depth);
 					les.Add(land_el);
 				}
@@ -198,14 +203,19 @@ public class GenerateWells : MonoBehaviour
         // calculate the average precipitation data of four seasons
         float average_Spring = (numVal1 + numVal11 + numVal12) / 3 * 0.0254f;
        
-		for(int i=0; i<wells.Count; i++)
+		for(int i=0; i<points.Count; i++)
         {
-			newYScale(points[i], scale * (points_orlen[i] + average_Spring));
+            points_orlen[i] = points_orlen[i] + average_Spring;
+			newYScale(points[i], scale * points_orlen[i]);
         }
 
 		for(int i=0; i<wells.Count; i++)
         {
-			newYScale(waters[i], scale * (sts[i] + average_Spring));
+            if(sts_orlen[i] + average_Spring < 0)
+                average_Spring = sts_orlen[i] * -1 + 1;
+
+            sts[i] = sts_orlen[i] + average_Spring;
+			newYScale(waters[i], scale * sts[i]);
         }
         
 		UpdateColors();
@@ -242,14 +252,19 @@ public class GenerateWells : MonoBehaviour
        
         float average_Summer = (numVal2 + numVal3 + numVal4) / 3 * 0.0254f;
 
-		for(int i=0; i<wells.Count; i++)
+		for(int i=0; i<points.Count; i++)
         {
-			newYScale(points[i], scale * (points_orlen[i] + average_Summer));
+            points_orlen[i] = points_orlen[i] + average_Summer;
+			newYScale(points[i], scale * points_orlen[i]);
         }
 
 		for(int i=0; i<wells.Count; i++)
         {
-			newYScale(waters[i], scale * (sts[i] + average_Summer));
+            if(sts_orlen[i] + average_Summer < 0)
+                average_Summer = sts_orlen[i] * -1 + 1;
+
+            sts[i] = sts_orlen[i] + average_Summer;
+			newYScale(waters[i], scale * sts[i]);
         }
 
 		UpdateColors();
@@ -287,14 +302,19 @@ public class GenerateWells : MonoBehaviour
        
         float average_Fall = (numVal5 + numVal6 + numVal7) / 3 * 0.0254f;
         
-        for(int i=0; i<wells.Count; i++)
+        for(int i=0; i<points.Count; i++)
         {
-			newYScale(points[i], scale * (points_orlen[i] + average_Fall));
+            points_orlen[i] = points_orlen[i] + average_Fall;
+			newYScale(points[i], scale * points_orlen[i]);
         }
 
 		for(int i=0; i<wells.Count; i++)
         {
-			newYScale(waters[i], scale * (sts[i] + average_Fall));
+            if(sts_orlen[i] + average_Fall < 0)
+                average_Fall = sts_orlen[i] * -1 + 1;
+
+            sts[i] = sts_orlen[i] + average_Fall;
+			newYScale(waters[i], scale * sts[i]);
         }
 
 		UpdateColors();
@@ -332,14 +352,71 @@ public class GenerateWells : MonoBehaviour
         
         float average_Winter = (numVal8 + numVal9 + numVal10) / 3 * 0.0254f;
 
-        for(int i=0; i<wells.Count; i++)
+        for(int i=0; i<points.Count; i++)
         {
-			newYScale(points[i], scale * (points_orlen[i] + average_Winter));
+            points_orlen[i] = points_orlen[i] + average_Winter;
+			newYScale(points[i], scale * points_orlen[i]);
         }
 
 		for(int i=0; i<wells.Count; i++)
         {
-			newYScale(waters[i], scale * (sts[i] + average_Winter));
+            if(sts_orlen[i] + average_Winter < 0)
+                average_Winter = sts_orlen[i] * -1 + 1;
+
+            sts[i] = sts_orlen[i] + average_Winter;
+			newYScale(waters[i], scale * sts[i]);
+        }
+
+		UpdateColors();
+    }
+
+    public void SetRainTest()
+    {        
+        float average_test = 60.0f;
+
+        for(int i=0; i<points.Count; i++)
+        {
+            points_orlen[i] = points_orlen[i] + average_test;
+			newYScale(points[i], scale * points_orlen[i]);
+        }
+
+		for(int i=0; i<wells.Count; i++)
+        {
+            if(sts_orlen[i] + average_test < 0)
+                average_test = sts_orlen[i] * -1 + 1;
+
+            sts[i] = sts_orlen[i] + average_test;
+			newYScale(waters[i], scale * sts[i]);
+        }
+
+		UpdateColors();
+    }
+
+    public void SetDroughtTest()
+    {        
+        float average_test = -50.0f;
+
+        for(int i=0; i<points.Count; i++)
+        {
+            if(points_orlen[i] + average_test < 0)
+                average_test = points_orlen[i] * -1 + 1;
+
+            points_orlen[i] = points_orlen[i] + average_test;
+			newYScale(points[i], scale * (points_orlen[i] + average_test));
+        }
+
+		for(int i=0; i<wells.Count; i++)
+        {
+            //if(sts_orlen[i] + average_test < 0)
+                //average_test = sts_orlen[i] * -1 + 0.5f;
+
+            if(wells[i].name == "2325611")
+            {
+                average_test = sts_orlen[i] * -1 + 0.5f;
+            }
+
+            sts[i] = sts_orlen[i] + average_test;
+			newYScale(waters[i], scale * sts[i]);
         }
 
 		UpdateColors();

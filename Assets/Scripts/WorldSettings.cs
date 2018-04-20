@@ -16,12 +16,13 @@ public class WorldSettings : MonoBehaviour
 	void Start ()
 	{
 		visible = true;
+		Cursor.visible = true;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		
+		Cursor.visible = true;
 	}
 
 	public void ToggleTerrain ()
@@ -61,5 +62,10 @@ public class WorldSettings : MonoBehaviour
 	{
 		rain.Stop();
         rain_sound.Stop();
+	}
+
+	public void printTest()
+	{
+		print("Testing");
 	}
 }
