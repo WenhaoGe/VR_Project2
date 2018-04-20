@@ -11,6 +11,7 @@ public class GenerateWells : MonoBehaviour
 	public GameObject water_cyl;
 	public GameObject container_cube;
 	public GameObject water_cube;
+    public GameObject Spring;
 
 	private List<GameObject> wells = new List<GameObject>();
 	private List<GameObject> markers = new List<GameObject>();
@@ -106,6 +107,7 @@ public class GenerateWells : MonoBehaviour
 					GameObject well = Instantiate(water_well, new Vector3 (xPos, scale*land_el+3.5f, zPos), Quaternion.identity);
 					GameObject box = Instantiate(container_cube, new Vector3 (xPos, scale*land_el+3.5f, zPos), Quaternion.identity);
 					GameObject marker = Instantiate(well_marker, new Vector3 (xPos, 150f, zPos), Quaternion.Euler(new Vector3(80,0,0)));
+                    GameObject Wspring = Instantiate(Spring, new Vector3(xPos, scale * land_el, zPos), Quaternion.identity);
                     
 					//GameObject depth = Instantiate(depth_object, new Vector3(xPos, scale*land_el , zPos), Quaternion.identity);
 					//GameObject water = Instantiate(water_cyl, new Vector3(xPos, scale*water_el - (scale*thickness), zPos), Quaternion.identity);
