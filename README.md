@@ -89,6 +89,7 @@ There's a start menu when you begin the game that allows the player to select wh
    - Read data from the csv document and calculate the average precipitation data for each season.
    - Modified the water layer and set the water thickness by using the average precipitation data for each season
    - Decorated the terrain by using trees, grass and houses
+   - Wrote script to let the water fountain appear inside of the wells when users click play button
 - Kevon Manahan's part:
    - Created models to represent elevation of each well
    - Read data from Excel so the elevation is scaled properly for each well
