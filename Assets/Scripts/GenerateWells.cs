@@ -12,6 +12,8 @@ public class GenerateWells : MonoBehaviour
 	public GameObject container_cube;
 	public GameObject water_cube;
     public GameObject Spring;
+    public Material[] orig_mat;
+	public Material[] other_mat;
 
 	private List<GameObject> wells = new List<GameObject>();
 	private List<GameObject> markers = new List<GameObject>();
@@ -51,14 +53,20 @@ public class GenerateWells : MonoBehaviour
             if(x < a && b < x)
 			{
 				markers[i].GetComponent<SpriteRenderer>().color = Color.green;
-				//depths[i].GetComponent
+                depths[i].GetComponent<Renderer>().materials = orig_mat;
 			}
 			else
 			{
 				markers[i].GetComponent<SpriteRenderer>().color = Color.red;
+                depths[i].GetComponent<Renderer>().materials = other_mat;
 			}
 
             sts[i] = sts_orlen[i];
+        }
+
+        for(int i=0; i<points.Count; i++)
+        {
+            points_cur[i] = points_orlen[i];
         }
 	}
 
@@ -130,13 +138,21 @@ public class GenerateWells : MonoBehaviour
 					depth.name = values[0]+"_well";
 					water.name = values[0]+"_st";
 
-					var info1 = "\nLocation: "+ longitude +", "+latitude+"\nCounty: "+values[1];
-					var info2 = "\nWell Depth: "+ well_depth +"\nLand Elevation: "+values[5];
-					var info3 = "\nWater Elevation: " + values [6] + "\nSaturatedThickness: " + values [7];
-					var info4 = "\nLast Measurement On: " + values [9] + "/" + values [10] + "/" + values[11];
+					var info1 = "\nLocation: "+ longitude +", "+latitude;
+                    var info2 = "\nCounty: "+values[1];
+					var info3 = "\nWell Depth: "+ well_depth;
+                    var info4 = "\nLand Elevation: "+values[5];
+					var info5 = "\nWater Elevation: " + values [6];
+                    var info6 = "\nSaturated Thickness: " + values [7];
+					var info7 = "\nLast Measurement On: " + values [9] + "/" + values [10] + "/" + values[11];
 
-					//well.GetComponent<DisplayInfo> ().inFormation = info1+info2+info3+info4;
-					box.GetComponent<DisplayInfo> ().inFormation = info1+info2+info3+info4;
+					box.GetComponent<DisplayInfo> ().i1 = info1;
+                    box.GetComponent<DisplayInfo> ().i2 = info2;
+                    box.GetComponent<DisplayInfo> ().i3 = info3;
+                    box.GetComponent<DisplayInfo> ().i4 = info4;
+                    box.GetComponent<DisplayInfo> ().i5 = info5;
+                    box.GetComponent<DisplayInfo> ().i6 = info6;
+                    box.GetComponent<DisplayInfo> ().i7 = info7;
 					marker.GetComponent<SpriteRenderer>().color = Color.green;
 
 					wells.Add(well);
@@ -176,6 +192,7 @@ public class GenerateWells : MonoBehaviour
 					point.transform.localScale = new Vector3(10.8f, newYScale( point, scale * thickness ), 10.8f);
 					point.name = values [0];
                     points.Add(point);
+                    points_cur.Add(thickness);
 					points_orlen.Add(thickness);
 				}
 			}
@@ -207,17 +224,15 @@ public class GenerateWells : MonoBehaviour
        
 		for(int i=0; i<points.Count; i++)
         {
-            points_orlen[i] = points_orlen[i] + average_Spring;
-			newYScale(points[i], scale * points_orlen[i]);
+            points_cur[i] = points_orlen[i] + average_Spring;
+			newYScale(points[i], scale * points_cur[i]);
         }
 
 		for(int i=0; i<wells.Count; i++)
         {
-            if(sts_orlen[i] + average_Spring < 0)
-                average_Spring = sts_orlen[i] * -1 + 1;
-
             sts[i] = sts_orlen[i] + average_Spring;
 			newYScale(waters[i], scale * sts[i]);
+            boxs[i].GetComponent<DisplayInfo> ().i6 = "\nSaturated Thickness: " + sts[i];
         }
         
 		UpdateColors();
@@ -256,17 +271,15 @@ public class GenerateWells : MonoBehaviour
 
 		for(int i=0; i<points.Count; i++)
         {
-            points_orlen[i] = points_orlen[i] + average_Summer;
-			newYScale(points[i], scale * points_orlen[i]);
+            points_cur[i] = points_orlen[i] + average_Summer;
+			newYScale(points[i], scale * points_cur[i]);
         }
 
 		for(int i=0; i<wells.Count; i++)
         {
-            if(sts_orlen[i] + average_Summer < 0)
-                average_Summer = sts_orlen[i] * -1 + 1;
-
             sts[i] = sts_orlen[i] + average_Summer;
 			newYScale(waters[i], scale * sts[i]);
+            boxs[i].GetComponent<DisplayInfo> ().i6 = "\nSaturated Thickness: " + sts[i];
         }
 
 		UpdateColors();
@@ -306,17 +319,15 @@ public class GenerateWells : MonoBehaviour
         
         for(int i=0; i<points.Count; i++)
         {
-            points_orlen[i] = points_orlen[i] + average_Fall;
-			newYScale(points[i], scale * points_orlen[i]);
+            points_cur[i] = points_orlen[i] + average_Fall;
+			newYScale(points[i], scale * points_cur[i]);
         }
 
 		for(int i=0; i<wells.Count; i++)
         {
-            if(sts_orlen[i] + average_Fall < 0)
-                average_Fall = sts_orlen[i] * -1 + 1;
-
             sts[i] = sts_orlen[i] + average_Fall;
 			newYScale(waters[i], scale * sts[i]);
+            boxs[i].GetComponent<DisplayInfo> ().i6 = "\nSaturated Thickness: " + sts[i];
         }
 
 		UpdateColors();
@@ -356,17 +367,15 @@ public class GenerateWells : MonoBehaviour
 
         for(int i=0; i<points.Count; i++)
         {
-            points_orlen[i] = points_orlen[i] + average_Winter;
-			newYScale(points[i], scale * points_orlen[i]);
+            points_cur[i] = points_orlen[i] + average_Winter;
+			newYScale(points[i], scale * points_cur[i]);
         }
 
 		for(int i=0; i<wells.Count; i++)
         {
-            if(sts_orlen[i] + average_Winter < 0)
-                average_Winter = sts_orlen[i] * -1 + 1;
-
             sts[i] = sts_orlen[i] + average_Winter;
 			newYScale(waters[i], scale * sts[i]);
+            boxs[i].GetComponent<DisplayInfo> ().i6 = "\nSaturated Thickness: " + sts[i];
         }
 
 		UpdateColors();
@@ -378,17 +387,15 @@ public class GenerateWells : MonoBehaviour
 
         for(int i=0; i<points.Count; i++)
         {
-            points_orlen[i] = points_orlen[i] + average_test;
-			newYScale(points[i], scale * points_orlen[i]);
+            points_cur[i] = points_orlen[i] + average_test;
+			newYScale(points[i], scale * points_cur[i]);
         }
 
 		for(int i=0; i<wells.Count; i++)
         {
-            if(sts_orlen[i] + average_test < 0)
-                average_test = sts_orlen[i] * -1 + 1;
-
             sts[i] = sts_orlen[i] + average_test;
 			newYScale(waters[i], scale * sts[i]);
+            boxs[i].GetComponent<DisplayInfo> ().i6 = "\nSaturated Thickness: " + sts[i];
         }
 
 		UpdateColors();
@@ -396,29 +403,37 @@ public class GenerateWells : MonoBehaviour
 
     public void SetDroughtTest()
     {        
-        float average_test = -50.0f;
+        float average_test = -80.0f;
 
         for(int i=0; i<points.Count; i++)
         {
-            if(points_orlen[i] + average_test < 0)
-                average_test = points_orlen[i] * -1 + 1;
+            if(points_orlen[i] + average_test <= 0)
+                average_test = points_orlen[i] * -1 + 0.5f;
 
-            points_orlen[i] = points_orlen[i] + average_test;
-			newYScale(points[i], scale * (points_orlen[i] + average_test));
+            points_cur[i] = points_orlen[i] + average_test;
+			newYScale(points[i], scale * points_cur[i]);
         }
 
-		for(int i=0; i<wells.Count; i++)
-        {
-            //if(sts_orlen[i] + average_test < 0)
-                //average_test = sts_orlen[i] * -1 + 0.5f;
+        average_test = -80.0f;
 
-            if(wells[i].name == "2325611")
-            {
+		// for(int i=0; i<wells.Count; i++)
+        // {
+        //     if(sts_orlen[i] + average_test <= 0)
+        //         average_test = sts_orlen[i] * -1 + 0.5f;
+
+        //     sts[i] = sts_orlen[i] + average_test;
+		// 	newYScale(waters[i], scale * sts[i]);
+        //     boxs[i].GetComponent<DisplayInfo> ().i6 = "\nSaturated Thickness: " + sts[i];
+        // }
+
+        for(int i=wells.Count-1; i>=0; i--)
+        {
+            if(sts_orlen[i] + average_test <= 0)
                 average_test = sts_orlen[i] * -1 + 0.5f;
-            }
 
             sts[i] = sts_orlen[i] + average_test;
 			newYScale(waters[i], scale * sts[i]);
+            boxs[i].GetComponent<DisplayInfo> ().i6 = "\nSaturated Thickness: " + sts[i];
         }
 
 		UpdateColors();

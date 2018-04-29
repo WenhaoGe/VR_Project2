@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class DisplayInfo : MonoBehaviour
 {
     public bool isClicked = false;
-    public string inFormation = "Depth: 6,374 meters";
-    //private Button box;
+    public string i1 = "Location";
+    public string i2 = "County";
+    public string i3 = "Well Depth";
+    public string i4 = "Land Elevation";
+    public string i5 = "Water Elevation";
+    public string i6 = "Saturated Thickness";
+    public string i7 = "Last Measurement On";
     private Text t;
 
     void Start ()
@@ -30,7 +35,7 @@ public class DisplayInfo : MonoBehaviour
     {
         //box.SetActive(true);
         t.enabled = true;
-        t.text = inFormation;
+        t.text = i1+i2+i3+i4+i5+i6+i7;
     }
 
     void OnMouseExit()
